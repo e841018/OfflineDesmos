@@ -26,7 +26,7 @@
             
             document.querySelector('#file').onchange = function(e){
                 let file = e.target.files[0];
-                name = file.name.replace(/(\.json|\.JSON)$/, '');
+                name = file.name.replace(/\.(json|JSON)$/, '');
                 document.querySelector('#title').value = name;
                 document.querySelector('head>title').text = name;
                 let reader = new FileReader();
@@ -55,3 +55,6 @@
         </script>
     </body>
 </html>
+
+<!-- TODO: -->
+<!-- load multiple scripts / import -->
